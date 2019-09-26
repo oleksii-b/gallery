@@ -1,0 +1,25 @@
+$thumbnail-width: 160px;
+$thumbnail-margins: 5px;
+
+.Photos {
+  margin: 0 -5px;
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 0;
+    width: ($thumbnail-width + $thumbnail-margins * 2) * 4;
+  }
+
+  .photo {
+    display: inline-flex;
+    margin: 0 $thumbnail-margins;
+    max-width: $thumbnail-width;
+    vertical-align: top;
+  }
+
+  .description {
+    padding: 5px;
+  }
+}
