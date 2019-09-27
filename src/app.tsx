@@ -1,6 +1,9 @@
 import * as React from 'react';
 import {Switch, Route, Redirect} from 'react-router-dom';
 
+// import common styles before other components
+import './main.scss';
+
 const Spinner = () => <h4>Loading...</h4>;
 const MainPage = React.lazy(() => import('./pages/main-page'));
 

@@ -6,6 +6,7 @@ import {NameSpace} from '../../namespace';
 import {IAlbum} from '../../types/album.d';
 import {IAlbumsStore} from '../../stores/types/albums.d';
 import {IPhotosStore} from '../../stores/types/photos.d';
+import './styles.scss';
 
 const albums = NameSpace.ALBUMS;
 const photos = NameSpace.PHOTOS;
@@ -32,7 +33,7 @@ class Albums extends React.PureComponent<Props> {
     const {selectedAlbum} = this.props[photos];
 
     return (
-      <ul className='nav nav-pills nav-stacked' hidden={!albumsList.length}>
+      <ul className='Albums nav nav-pills nav-stacked' hidden={!albumsList.length}>
         <li
           className={cx({'active': !selectedAlbum})}
           onClick={this.onFilter.bind(null, null)}
